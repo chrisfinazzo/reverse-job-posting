@@ -10,7 +10,7 @@
   force = false
 # Netlify
 [[redirects]]
-  from = "https://gracious-babbage-21fe68.netlify.com"
+  from = "https://hilarious-nougat-10dc4c.netlify.com"
   to = "https://hirechrisfinazzo.com/"
   status = 301
   force = false
