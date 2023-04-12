@@ -37,7 +37,7 @@ status = 404
 [[plugins]]
 package = "netlify-plugin-csp-generator"
   [plugins.inputs]
-  buildDir = "build"
+  buildDir = "public"
   reportOnly = true
   [plugins.inputs.policies]
     defaultSrc = "'none'"
