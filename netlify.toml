@@ -1,0 +1,55 @@
+# Build
+[build]
+  publish = "public"
+  command = "npm run build"
+# WWW
+[[redirects]]
+  from = "https://www.hirechrisfinazzo.com/"
+  to = "https://hirechrisfinazzo.com/"
+  status = 301
+  force = false
+# Netlify
+[[redirects]]
+  from = "https://gracious-babbage-21fe68.netlify.com"
+  to = "https://hirechrisfinazzo.com/"
+  status = 301
+  force = false
+# 404
+[[redirects]]
+from = "*"
+to = "/404"
+status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]  
+    cache-control = '''
+    no-transform'''
+    Permissions-Policy = "interest-cohort=()"
+    Upgrade-Insecure-Requests = "1"
+    Referrer-Policy = "same-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Strict-Transport-Security = "max-age=31536000; preload; includeSubDomains"
+
+# Plugins
+[[plugins]]
+package = "netlify-plugin-csp-generator"
+  [plugins.inputs]
+  buildDir = "build"
+  reportOnly = true
+  [plugins.inputs.policies]
+    defaultSrc = "'none'"
+    fontSrc = "'self'"
+    imgSrc = "'self' data:"
+    styleSrc = "'self' 'sha256-UTjtaAWWTyzFjRKbltk24jHijlTbP20C1GUYaWPqg7E=' https://use.fontawesome.com https://fonts.googleapis.com https://fonts.gstatic.com"
+    scriptSrc = "'self'"
+    baseUri = "'self'"
+    manifestSrc = "'self'"
+    connectSrc = "'self'"
+    objectSrc = "'none'"
+    formAction = "'self'"
+    frameAncestors = "'none'"
+    reportUri = "https://chrisfinazzo.report-uri.com/r/d/csp/enforce"
+    workerSrc = "'self'"

@@ -1,0 +1,26 @@
+{
+  "name": "reverse-job-posting",
+  "version": "2.0.0",
+  "keywords": [],
+  "homepage": "https://hirechrisfinazzo.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisfinazzo/reverse-job-posting.git"
+  },
+  "author": "",
+  "main": "eleventy.config.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "npm run sass:release && eleventy",
+    "sass:watch": "sass --watch ./src/scss/app.scss:./public/css/app.css",
+    "sass:release": "sass --style=compressed ./src/scss/app.scss ./public/css/app.css"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "netlify-plugin-csp-generator": "^1.5.0",
+    "sass": "^1.60.0"
+  }
+}

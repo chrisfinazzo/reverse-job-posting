@@ -1,0 +1,32 @@
+---
+title: Contact
+layout: "base.njk"
+---
+<h2>{{title}}</h2>
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
+<input type="hidden" name="form-name" value="contact" />
+  <p>
+    <label>
+    First Name: <input type="text" name="first-name" />
+    </label>
+  </p>
+  <p>
+    <label>
+    Last Name: <input type="text" name="last-name" />
+    </label>
+  </p>
+  <p>
+    <label>
+      Your Email: <input type="email" name="email" />
+    </label>
+  </p>
+  <p>
+    <label>
+      Message: <textarea name="message" /></textarea>
+    </label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+

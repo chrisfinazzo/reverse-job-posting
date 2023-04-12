@@ -1,0 +1,41 @@
+:root {
+  --rebeccapurple: #663399;
+  --banner-background-color: #597AA6;
+  --banner-text-color: #FFFFFF;
+  --no-underlines: none;
+  --no-list: none;
+  --center: center;
+  --left: left;
+  --system: -apple-system, system-ui, Verdana, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--system);
+  line-height: 1.6;
+}
+
+header {
+  text-align: var(--center);
+  width: 100%;
+  background-color: var(--banner-background-color);
+  color: var(--banner-text-color);
+}
+
+h2 {
+  margin-top: 0;
+  text-align: var(--center);
+}
+
+h2 a {
+  color: inherit;
+  text-decoration: var(--no-underlines);
+}
+
+h2 + p {
+  text-align: var(--center);
+}
