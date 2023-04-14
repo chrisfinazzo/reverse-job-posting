@@ -1,13 +1,19 @@
 {
   "name": "reverse-job-posting",
   "version": "2.0.0",
-  "keywords": [],
+  "keywords": [
+    "microsite",
+    "eleventy"
+  ],
   "homepage": "https://hirechrisfinazzo.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/chrisfinazzo/reverse-job-posting.git"
   },
-  "author": "",
+  "author": {
+    "name": "Chris Finazzo",
+    "url": "https://chrisfinazzo.com/"
+  },
   "main": "eleventy.config.js",
   "scripts": {
     "start": "eleventy --serve",
