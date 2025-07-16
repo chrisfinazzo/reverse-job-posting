@@ -1,0 +1,361 @@
+        :root {
+            /* Base typography variables */
+            --base-font-size: 16px;
+            --ratio: 1.25; /* Major third scale ratio */
+            
+            /* Colors */
+            --rebeccapurple: #663399;
+            --banner-text-color: #333;
+            --text-color: #333;
+            --dark-bg: #EEE;
+            --light-bg: #f8f9fa;
+            
+            /* Typography Scale */
+            --text-xs: calc(0.64rem - 1px);   /* ~9px */
+            --text-sm: calc(0.8rem - 1px);    /* ~12px */
+            --text-base: calc(1rem - 1px);    /* ~15px */
+            --text-md: calc(1.25rem - 1px);   /* ~19px */
+            --text-lg: calc(1.563rem - 1px);  /* ~24px */
+            --text-xl: calc(1.953rem - 1px);  /* ~30px */
+            --text-2xl: calc(2.441rem - 1px); /* ~38px */
+            --text-3xl: calc(3.052rem - 1px); /* ~48px */
+            
+            /* Line Heights */
+            --leading-tight: 1.1;     /* Headings */
+            --leading-snug: 1.25;     /* Subheadings */
+            --leading-normal: 1.5;    /* Body text */
+            --leading-relaxed: 1.75;  /* Small text */
+            
+            /* Layout */
+            --no-underlines: none;
+            --no-list: none;
+            --center: center;
+            --left: left;
+            --system: -apple-system, system-ui, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Mobile first approach */
+        html {
+            font-size: 14px; /* Base size for mobile devices */
+        }
+
+        @media (min-width: 768px) {
+            html {
+                font-size: 16px; /* Larger base size on tablets and up */
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            html {
+                font-size: 18px; /* Even larger base size on desktops */
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--system);
+            line-height: var(--leading-normal);
+            min-width: 320px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 12px;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+        }
+
+        @media (min-width: 768px) {
+            body {
+                max-width: 760px;
+                padding: 20px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            body {
+                max-width: 800px;
+            }
+        }
+
+        /* Header Styles */
+        header {
+            text-align: var(--center);
+            width: 100%;
+            color: var(--banner-text-color);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: var(--text-2xl);
+            line-height: var(--leading-tight);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: var(--text-xl);
+            line-height: var(--leading-tight);
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+            text-align: var(--center);
+        }
+
+        h3 {
+            font-size: var(--text-lg);
+            line-height: var(--leading-snug);
+            margin-bottom: 0.8rem;
+        }
+
+        h4 {
+            font-size: var(--text-md);
+            line-height: var(--leading-snug);
+        }
+
+        p {
+            font-size: var(--text-base);
+            line-height: var(--leading-normal);
+            margin-bottom: 1rem;
+        }
+
+        small, .caption {
+            font-size: var(--text-sm);
+            line-height: var(--leading-relaxed);
+            color: #777;
+        }
+
+        #rights {
+            text-align: var(--center);
+        }
+
+        .text-xs {
+            font-size: var(--text-xs);
+            line-height: var(--leading-relaxed);
+        }
+
+        /* Link styles */
+        a:link {
+            text-decoration: var(--no-underlines);
+        }
+
+        a:hover {
+            color: var(--rebeccapurple);
+        }
+
+        /* Component Styles */
+        .text-system {
+            background-color: var(--light-bg);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .text-system {
+                padding: 2rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .lead {
+            font-size: var(--text-md);
+            line-height: var(--leading-snug);
+        }
+
+        .supporting-text {
+            font-size: var(--text-sm);
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        /* Toggle for demonstrating font size changes */
+        .size-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .size-toggle button {
+            padding: 5px 10px;
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Nested example */
+        .nested-example {
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+
+        .nested-level {
+            padding-left: 1.5rem;
+            border-left: 2px solid #eee;
+            margin: 1rem 0;
+        }
+
+        /* Comparison section */
+        .comparison {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        @media (min-width: 768px) {
+            .comparison {
+                flex-direction: row;
+            }
+        }
+
+        .rem-column, .em-column, .scale-column {
+            flex: 1;
+        }
+
+        /* Grid layouts */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 1.25rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        
+        .me {
+            border-radius: 100%;
+            grid-row: 1;
+            margin: 0 auto;
+            align-self: var(--center);
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .intro {
+            grid-row: 2;
+            text-align: var(--center);
+        }
+        
+        /* Social icons */
+        #social {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 0.15rem;
+            text-align: var(--center);
+            list-style-type: var(--no-list);
+            margin: 2rem 0;
+        }
+        
+        .fa-github {
+            grid-column: 1;
+            text-align: var(--center);
+        }
+        
+        .fa-linkedin {
+            grid-column: 2;
+            text-align: var(--center);
+        }
+        
+        .fa-mastodon {
+            grid-column: 3;
+            text-align: var(--center);
+        }
+
+.bbedit, .success-message {
+  text-align: center;
+}
+
+        @media screen and (min-width: 665px) {
+            .content {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-column-gap: 1rem;
+            }
+            
+            .me {
+                border-radius: 100%;
+                grid-column: 1;
+                grid-row: 1;
+                align-self: var(--center);
+            }
+            
+            .intro {
+                grid-column: 2;
+                grid-row: 1;
+                text-align: var(--left);
+            }
+            
+            #social {
+                grid-template-columns: repeat(3, 1fr);
+                grid-column-gap: 1rem;
+                align-content: var(--center);
+            }
+            
+            .fa-github {
+                grid-column: 1;
+                align-self: var(--center);
+            }
+            
+            .fa-linkedin {
+                grid-column: 2;
+                align-self: var(--center);
+            }
+            
+            .fa-mastodon {
+                grid-column: 3;
+                align-self: var(--center);
+            }
+        }
+
+        /* Dark mode support */
+        /* Font awesome icon colors */
+        .fa-github a {
+            color: #333333;
+        }
+        
+        .fa-linkedin a {
+            color: #0074B3;
+        }
+        
+        .fa-mastodon a {
+            color: #6364FF;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1a1a1a;
+                color: #E9F2F9;
+            }
+            
+            .text-system {
+                background-color: #2a2a2a;
+            }
+            
+            .size-toggle button {
+                background-color: #333;
+                border-color: #444;
+                color: #fff;
+            }
+            
+            .nested-level {
+                border-left-color: #444;
+            }
+            
+            .nested-example, .comparison {
+                border-color: #444;
+            }
+            
+            .fa-github a {
+                color: #ffffff;
+            }
+        }
+    

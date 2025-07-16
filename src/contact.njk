@@ -2,31 +2,24 @@
 title: Contact
 layout: "base.njk"
 ---
-<h2>{{title}}</h2>
+<h2>Get in Touch</h2>
 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
-<input type="hidden" name="form-name" value="contact" />
-  <p>
-    <label>
-    First Name: <input type="text" name="first-name" />
-    </label>
-  </p>
-  <p>
-    <label>
-    Last Name: <input type="text" name="last-name" />
-    </label>
-  </p>
-  <p>
-    <label>
-      Your Email: <input type="email" name="email" />
-    </label>
-  </p>
-  <p>
-    <label>
-      Message: <textarea name="message" /></textarea>
-    </label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-
+    <div class="form-group">
+      <label for="name" class="required-field">Name</label>
+      <input type="text" id="name" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="email" class="required-field">Email</label>
+      <input type="email" id="email" required>
+      <span class="help-text">We'll never share your email</span>
+    </div>
+    
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Type your message here..."></textarea>
+      <span class="help-text">Please provide as much detail as possible</span>
+    </div>
+    
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
