@@ -32,23 +32,3 @@ status = 404
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Strict-Transport-Security = "max-age=31536000; preload; includeSubDomains"
-
-# Plugins
-[[plugins]]
-package = "netlify-plugin-csp-generator"
-  [plugins.inputs]
-  buildDir = "public"
-  reportOnly = true
-  [plugins.inputs.policies]
-    defaultSrc = "'none'"
-    fontSrc = "'self' https://ka-f.fontawesome.com"
-    imgSrc = "'self' https://www.barebones.com data:"
-    styleSrc = "'self' 'sha256-HpGW2r4UecoRVijHlix6gC/DKgjT6v7iq+hGeZuUUvs=' https://ka-f.fontawesome.com https://fonts.googleapis.com https://fonts.gstatic.com"
-    scriptSrc = "'self' https://kit.fontawesome.com"
-    baseUri = "'self'"
-    manifestSrc = "'self'"
-    connectSrc = "'self' https://ka-f.fontawesome.com"
-    objectSrc = "'none'"
-    formAction = "'self'"
-    frameAncestors = "'none'"
-    workerSrc = "'self'"
