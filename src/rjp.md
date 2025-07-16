@@ -46,5 +46,5 @@ layout: "base.njk"
   </ul> 
 <p>Programming projects - including code that runs this site - can be found on <a href="https://github.com/chrisfinazzo">GitHub</a>.</p>
 
-<p>If you're looking for a resume, it is available for download <a href="../media/christopher-m-finazzo-resume.pdf" download>here</a>.</p>
+<p>If you're looking for a r&#233;sum&#233;, it is available for download <a href="../media/christopher-m-finazzo-resume.pdf" download>here</a>.</p>
 </div>
