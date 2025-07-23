@@ -6,19 +6,20 @@ layout: "base.njk"
 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
     <div class="form-group">
       <label for="name" class="required-field">Name</label>
-      <input type="text" id="name" required>
+      <input type="text" placeholder="John Smith" id="name" required>
+            <span class="help-text">Who are you?</span>
     </div>
     
     <div class="form-group">
       <label for="email" class="required-field">Email</label>
-      <input type="email" id="email" required>
-      <span class="help-text">We'll never share your email</span>
+      <input type="email" placeholder="john.smith@example.com" id="email" required>
+      <span class="help-text">I will never share your email without permission.</span>
     </div>
     
     <div class="form-group">
       <label for="message">Message</label>
       <textarea id="message" placeholder="Type your message here..."></textarea>
-      <span class="help-text">Please provide as much detail as possible</span>
+      <span class="help-text">How can I help you?</span>
     </div>
     
     <button type="submit" class="submit-btn">Submit</button>
