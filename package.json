@@ -18,7 +18,8 @@
   "main": "eleventy.config.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "npm run styles && eleventy",
+    "styles": "cleancss -o public/css/style.min.css --source-map src/css/style.css src/css/form.css"
   },
   "license": "ISC",
   "dependencies": {
