@@ -18,12 +18,16 @@
   "main": "eleventy.config.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "npm run styles && eleventy",
+    "styles": "cleancss -o public/css/style.min.css --source-map src/css/style.css src/css/form.css"
   },
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3"
   }
 }
