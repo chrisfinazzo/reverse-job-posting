@@ -21,7 +21,7 @@
     "build": "npm run styles && eleventy",
     "styles": "cleancss -o public/css/style.min.css --source-map src/css/style.css src/css/form.css"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
     "@fortawesome/fontawesome-free": "^6.4.0",
