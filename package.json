@@ -19,7 +19,7 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "npm run styles && eleventy",
-    "styles": "cleancss -o public/css/style.min.css --source-map src/css/style.css src/css/form.css"
+    "styles": "node -e \"require('fs').writeFileSync('src/css/_entry.css', '@import \\\"style.css\\\";\\n@import \\\"form.css\\\";\\n')\" && lightningcss --minify --bundle --sourcemap --targets \">= 0.25%\" src/css/_entry.css -o public/css/style.min.css && node -e \"require('fs').unlinkSync('src/css/_entry.css')\""
   },
   "license": "MIT",
   "dependencies": {
@@ -28,9 +28,11 @@
     "@fortawesome/free-brands-svg-icons": "^7.0.1"
   },
   "devDependencies": {
-    "clean-css-cli": "^5.6.3"
+    "clean-css-cli": "^5.6.3",
+    "lightningcss-cli": "^1.32.0"
   },
   "allowScripts": {
-    "fsevents@2.3.2": true
+    "fsevents@2.3.2": true,
+    "lightningcss-cli@1.32.0": true
   }
 }
