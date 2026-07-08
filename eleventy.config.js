@@ -1,6 +1,6 @@
 export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/css/*");
-  eleventyConfig.addPassthroughCopy("./src/css/style.min.css");
+  eleventyConfig.addPassthroughCopy("./src/css/app.min.css");
   eleventyConfig.addPassthroughCopy("./src/media");
 
   return {
@@ -10,3 +10,6 @@ export default function (eleventyConfig) {
     }
   };
 }
+
+
+
