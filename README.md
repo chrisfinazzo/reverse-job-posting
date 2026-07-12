@@ -1,6 +1,6 @@
 ## Reverse Job Posting
 
-A tiny little microsite, built with [Eleventy][] and [PostCSS][]
+A tiny little microsite, built with [Eleventy][] and [PostCSS][].
 
 [Eleventy]: https://www.11ty.dev/
 [PostCSS]: https://postcss.org/
