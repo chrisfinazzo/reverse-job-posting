@@ -32,3 +32,13 @@ status = 404
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Strict-Transport-Security = "max-age=31536000; preload; includeSubDomains"
+
+[[plugins]]
+package = "netlify-plugin-csp-generator"
+
+  [plugins.inputs]
+  buildDir = "public"
+  reportOnly = true
+
+  [plugins.inputs.policies]
+    defaultSrc = "'self'"
