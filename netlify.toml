@@ -23,8 +23,7 @@ status = 404
 [[headers]]
   for = "/*"
   [headers.values]  
-    cache-control = '''
-    no-transform'''
+    cache-control = "no-transform"
     Permissions-Policy = "interest-cohort=()"
     Upgrade-Insecure-Requests = "1"
     Referrer-Policy = "same-origin"
@@ -32,8 +31,8 @@ status = 404
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Strict-Transport-Security = "max-age=31536000; preload; includeSubDomains"
-    Reporting-Endpoints: csp-endpoint = "https://hirechrisfinazzo.com/csp-report"
-Content-Security-Policy: default-src 'self'; report-to csp-endpoint
+    Reporting-Endpoints = 'csp-endpoint="https://hirechrisfinazzo.com/csp-report"'
+    Content-Security-Policy = "default-src 'self'; report-to csp-endpoint"
 
 [[plugins]]
 package = "netlify-plugin-csp-generator"
