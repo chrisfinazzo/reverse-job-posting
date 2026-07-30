@@ -95,6 +95,10 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+/* Honeypot Field */
+.bots {
+  display: none;
+}
 /* Submit Button */
 .submit-btn {
   display: block;
